@@ -14,7 +14,8 @@
 
 ##实验阶段<br>
 1）LSTM做的比较差，只是比random高了10个百分点，所以在中期就开始放弃了【可能没有深入这个网络所导致的吧，以后有机会可以好好看一下】<br>
-2）直接用了densenet，它其实就是将之前层得到的特征层继续给后面的网络层一同输入（也为特征层复用），数据在9000量下，能跑到72%<br>
+2）直接用了[densenet](https://github.com/EillotY/DL_game/blob/master/demo_densenet_adddropout.py)，它其实就是将之前层得到的特征层继续给后面的网络层一同输入（也为特征层复用），数据在9000量下，能跑到72%<br>
+![](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565778177731&di=925bcceb374a21c1a77d7e4e317864b7&imgtype=0&src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-8999bcd09274bc92a89cea939fcb44f9_b.jpg)<br>
 3）resnet，有53，101，152；对于resnet152来说，图片的输入格式有要求，224*224，所以得将之前处理的数据resize下，网络采用的是残差trick，以便网络深度越大的情况下还能够收敛，这种tirck非常有用，只不过后期我硬件只是1060,跑的很慢，就resnet152没有得到一个好的结果<br>
 
 ##提升阶段<br>
