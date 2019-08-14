@@ -9,7 +9,7 @@
 ##解题思路：<br>
 1.数据给出的不同种类人的语音（被处理过后的）图像，噪声点很大，想用滤波去噪，但是会发现，有些语音的图像，居然有模糊【这部分是我能力有限的地方，对于一些图像做出正确的处理】，所以我是直接把图片放入网络里进行的操作<br>
 2.选择网络阶段:<br>
-1)首先想到的是LSTM，因为处理语音，还是LSTM厉害呀，不是嘛？[lstm_minist分类]（https://github.com/EillotY/DL_game/blob/master/lstm_mnist.py）<br>
+1)首先想到的是LSTM，因为处理语音，还是LSTM厉害呀，不是嘛？[lstm_minist分类](https://github.com/EillotY/DL_game/blob/master/lstm_mnist.py)<br>
 2)采用卷积神经网络，因为是分类问题，卷积来做的话，一个是因为cnn已经都可以做语音了，你一个小图像算什么？，采用了densenet和resnet<br>
 
 ##实验阶段<br>
